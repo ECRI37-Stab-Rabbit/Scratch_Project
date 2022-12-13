@@ -20,25 +20,9 @@ function BookContainer() {
     toggleCreate(false)
   }
 
-  const dispatch = useDispatch()
+  //This method takes a flat array and turns it into an array of book row arrays
+  //with each book row array containing upto 6 book cards.
 
-  // const bookData = useSelector((state) => state.book.bookData)
-  // const bookArray = []
-
-  // let bookRow = []
-  // for (let i = 0; i < bookData.length; i++) {
-  //   const newBook = <BookCard bookData={bookData[i]} />
-  //   // bookArray.push(newBook)
-  //   bookRow.push(newBook)
-  //   if (bookRow.length === 6) {
-  //     bookArray.push(bookRow)
-  //     bookRow = []
-  //   }
-  //   if (i === bookData.length - 1 && bookRow.length) {
-  //     bookArray.push(bookRow)
-  //   }
-  // }
-  // console.log(bookArray)
   const renderBooks = () => {
     const bookData = useSelector((state) => state.book.bookData)
     const bookArray = []
